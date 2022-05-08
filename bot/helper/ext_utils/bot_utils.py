@@ -110,6 +110,8 @@ def get_progress_bar_string(status):
     p_str = f"\n<b>➜Processing:</b> {p_str}"
     return p_str
 
+    uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
+
 def get_readable_message():
     with download_dict_lock:
         msg = ""
