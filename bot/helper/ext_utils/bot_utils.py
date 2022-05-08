@@ -153,7 +153,7 @@ def get_readable_message():
                            f" \n\n<b>➜Leechers:</b> {download.torrent_info().num_leechs}"
                 except:
                     pass
-                msg += f'\n\n<b>➜Request By:</b> ️{download.message.from_user.first_name}'
+                msg += f'\n\n<b>➜Request By:</b> {uname} '
                 msg += f"\n\n<b>➜To Stop:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n\n<b>➜Size: </b>{download.size()}"
